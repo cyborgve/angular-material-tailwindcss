@@ -11,10 +11,17 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Husky 8.0.3
 - Commit Lint CLI 17.4.0
 - Prettier 2.8.3
+- JSON-Server 0.17.1
+- Concurrently 7.6.0
+- Faker-JS 7.6.0
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+## Development server with JSON-Server backend and faker data
+
+Run `npn run dev:json` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files, for a backend json-server. Navigate to `http://localhost:4200/api`. The application will automatically reload if you change any of the source files
 
 ## Code scaffolding
 

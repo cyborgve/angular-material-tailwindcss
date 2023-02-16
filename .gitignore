@@ -40,3 +40,9 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Database
+database/*
+!database/database.js
+!database/routes.json
+!database/middlewares.json

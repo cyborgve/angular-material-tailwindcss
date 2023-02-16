@@ -1,25 +1,29 @@
 module.exports = () => {
-  const { faker } = require('@faker-js/faker');
-  const data = {
+  let { faker } = require('@faker-js/faker/locale/es_MX');
+
+  /** data faker quantities */
+  let usersQuantity = 10;
+
+  /** database */
+  let database = {
     users: [],
-    info: {
-      nameSystem: faker.name.jobArea() + ' System',
-      version: '0.0.1-SNAPSHOT',
-      property: faker.company.companyName(),
-    },
   };
 
-  // insert 5 fake users
-  for (let i = 0; i < 5; i++) {
-    data.users.push({
-      username: faker.internet.userName(),
-      name: faker.name.firstName() + ' ' + faker.name.lastName(),
-      role: faker.helpers.arrayElement(['ADMINISTRATOR', 'USER']),
-      email: faker.internet.email(),
-      status: faker.helpers.arrayElement(['ENABLED', 'DISABLED']),
+  /** users */
+  for (let i = 0; i < usersQuantity; i++) {
+    let name = faker.name.firstName();
+    let lastName = faker.name.lastName();
+    let fullName = name + ' ' + lastName;
+    database.users.push({
+      id: faker.random.numeric(10),
+      name: fullName,
+      email: faker.internet.email(name, lastName).toLowerCase(),
+      password: faker.internet.password(),
+      role: faker.helpers.arrayElement(['ADMIN', 'USER']),
       created: faker.date.past().getTime(),
-      modified: faker.date.recent().getTime(),
+      modified: faker.date.past().getTime(),
     });
   }
-  return data;
+
+  return database;
 };

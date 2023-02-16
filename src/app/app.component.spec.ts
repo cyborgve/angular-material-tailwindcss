@@ -16,10 +16,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Angular Material TailwindCSS'`, () => {
+  it(`should have as title 'angular-material-tailwindcss'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Angular Material TailwindCSS');
+    expect(app.title).toEqual('angular-material-tailwindcss');
   });
 
   it('should render title', () => {
@@ -27,7 +27,7 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.content span')?.textContent).toContain(
-      'Angular Material TailwindCSS app is running!'
+      'angular-material-tailwindcss app is running!'
     );
   });
 });

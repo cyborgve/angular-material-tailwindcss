@@ -1,14 +1,14 @@
 # Angular - Material - Tailwind CSS
 
-- Angular 15.1.0
-- Angular Material 15.1.4
-- Tailwind CSS 3.2.6
-- ESlint 8.33.0
+- Angular 18.0.2
+- Angular Material 18.0.2
+- Tailwind CSS 3.4.4
+- ESlint 8.57.0
 - Concurrently 7.6.0
 - JSON-Server 0.17.1
 - Faker-JS 7.6.0
-- Prettier 2.8.4
-- Commitlint 17.4.3
+- Prettier 2.8.8
+- Commitlint 17.8.1
 - Husky 8.0.3
 
 ## Classic development server
